@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import io, { Socket } from 'socket.io-client';
 import { Chessboard } from 'react-chessboard';
 import styles from './home.module.css'
+import Chat from '../chat/chat';
+import Navbar from '../navbar/navbar'
 
 
 const Game = () => {
@@ -61,10 +63,16 @@ const Game = () => {
     }
 
     return(
-        <div className={styles.container}>
-           <div className={styles.chessboard}>
-            <Chessboard boardOrientation={orientation} id="BasicBoard" position={boardState} onPieceDrop={handleChange} />
-           </div>
+        <div>
+            <div className="navbar">
+                <Navbar/>
+            </div>
+            <div className={styles.container}>
+                <div className={styles.chessboard}>
+                    <Chessboard boardOrientation={orientation} id="BasicBoard" position={boardState} onPieceDrop={handleChange} />
+                </div>
+            <Chat/>
+        </div>
         </div>
     )
 };

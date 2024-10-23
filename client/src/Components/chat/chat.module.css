@@ -1,0 +1,12 @@
+.chat{
+    background-color: pink;
+    height: 400px;
+    width: 350px;
+}
+
+.input{
+    width: 405px;
+    height: 32px ;
+    font-size: bold;
+    color: purple;
+}

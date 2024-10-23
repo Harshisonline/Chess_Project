@@ -6,6 +6,7 @@ import SignIn from './Components/signIn/signIn';
 import Home from './Components/home/home';
 import ProtectedRoute from './Components/protected';
 import { AuthProvider } from './Contexts/authContext';
+
 function App() {
   return (
     <AuthProvider>
